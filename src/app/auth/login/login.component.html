@@ -1,0 +1,33 @@
+<div class="overlay" (click)="close.emit()">
+  <div class="login-card right" (click)="$event.stopPropagation()">
+    
+    <div class="logo">
+      🏥 <span>Hospital Portal</span>
+    </div>
+
+    <h1>Welcome</h1>
+    <p>Please login to continue</p>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" placeholder="doctor@hospital.com" required />
+      </div>
+
+      <div class="field">
+        <label>Password</label>
+        <input type="password" placeholder="••••••••" required />
+      </div>
+
+      <button type="submit" class="login-btn">
+        Login
+      </button>
+
+      <div class="links">
+        <a href="#">Forgot password?</a>
+        <a href="#">New user? Register</a>
+      </div>
+    </form>
+
+  </div>
+</div>

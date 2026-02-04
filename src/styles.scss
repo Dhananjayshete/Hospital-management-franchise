@@ -1,0 +1,230 @@
+// /* You can add global styles to this file, and also import other style files */
+// html, body {
+//   margin: 0;
+//   padding: 0;
+//   min-height: 100%;
+// }
+
+// // body {
+// //   background: linear-gradient(to right, #3b82f6, #6366f1, #db2777);
+// //   font-family: Arial, Helvetica, sans-serif;
+// // }
+
+// // app-root {
+// //   display: block;
+// //   min-height: 100vh;
+// // }
+// .content {
+//   padding: 24px;
+//   background: #f8fafc;
+//   min-height: calc(100vh - 64px);
+// }
+
+// .hospital-title {
+//     font-size: 36px;
+//     font-weight: 700;
+//     text-align: center;
+//     margin: 20px 0 30px;
+  
+//     background-image: linear-gradient(to top left, #1e293b, #ffffff, #71717a);
+//     background-clip: text;
+//     -webkit-background-clip: text;
+//     color: transparent;
+  
+//     font-family: "Segoe UI", Roboto, Arial, sans-serif;
+//   }
+//   .header-section {
+//     background-color: #111827;
+//     position: sticky;
+//     top: 0;
+//     z-index: 1000;
+//   }
+//   .desktop-nav {
+//     display: none;
+//     align-items: center;
+//     gap: 2rem;
+//   }
+  
+//   .desktop-nav {
+//     display: flex;
+//     gap: 2rem;
+//   }
+  
+//   .nav-content {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     width: 100%;
+//   }
+//   .hero-title {
+//     text-align: center;
+//     padding-top: 3rem;
+//     font-size: 2.5rem;
+//     font-weight: 700;
+//     color: white;
+//   }
+//   * {
+//     margin: 0;
+//     padding: 0;
+//   }
+//   .hero-section {
+//     min-height: calc(100vh - 80px);
+//     padding-top: 80px;
+//   }
+  
+
+
+
+
+
+/* ================= HEADER NAVBAR ================= */
+
+.navbar {
+  height: 64px;
+  width: 100%;
+  background: linear-gradient(90deg, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.wave-icon {
+  color: #38bdf8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #cbd5f5;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: white;
+}
+
+.cta-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #1d4ed8;
+}
+
+/* ================= HEADER ACTIONS ================= */
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 16px;
+}
+
+.scan-icon {
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.scan-icon:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+
+
+
+/* ================= QR SCANNER LINE ANIMATION ================= */
+
+.scan-line {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: scanMove 1.8s linear infinite;
+}
+
+.scan-line.l1 {
+  animation-delay: 0s;
+}
+
+.scan-line.l2 {
+  animation-delay: 0.3s;
+}
+
+.scan-line.l3 {
+  animation-delay: 0.6s;
+}
+
+@keyframes scanMove {
+  0% {
+    stroke-dashoffset: 20;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -20;
+    opacity: 0;
+  }
+}
+
+
+
+.scanner-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.scanner-modal {
+  width: 320px;
+  background: #020617;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+zxing-scanner {
+  width: 100%;
+  height: 240px;
+}
+
+.close-btn {
+  width: 100%;
+  margin-top: 12px;
+  padding: 8px;
+  background: #2563eb;
+  border: none;
+  border-radius: 6px;
+  color: white;
+}

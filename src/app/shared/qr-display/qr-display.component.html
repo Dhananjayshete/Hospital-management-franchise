@@ -1,0 +1,16 @@
+<div class="qr-backdrop">
+    <div class="qr-card">
+      <h2>Scan to View Hospital Info</h2>
+  
+      <qrcode
+        [qrdata]="hospitalUrl"
+        [width]="220"
+        errorCorrectionLevel="M">
+      </qrcode>
+  
+      <p>Open your mobile camera and scan</p>
+  
+      <button (click)="closed.emit()">Close</button>
+    </div>
+  </div>
+  

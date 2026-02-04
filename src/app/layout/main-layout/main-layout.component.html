@@ -1,0 +1,13 @@
+<!--  HEADER (ONLY ONCE) -->
+
+<app-header (getStarted)="openLogin()"></app-header>
+
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>
+
+<!--  LOGIN MODAL -->
+<app-login
+  *ngIf="showLogin"
+  (close)="closeLogin()">
+</app-login>

@@ -1,0 +1,247 @@
+/* ================================
+   HEADER / NAVBAR
+================================ */
+.navbar {
+  height: 64px;
+  width: 100%;
+  background: linear-gradient(90deg, #031746, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  box-sizing: border-box;
+  overflow: visible; /* REQUIRED for dropdowns */
+  z-index: 100;
+}
+
+/* ================================
+   LOGO
+================================ */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo .icon {
+  background: #2563eb;
+  padding: 6px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Wave Icon Animation */
+.wave-path {
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: waveMove 1.5s ease-in-out infinite;
+}
+
+@keyframes waveMove {
+  0% {
+    stroke-dashoffset: 120;
+    opacity: 1;
+  }
+  50% {
+    stroke-dashoffset: 60;
+    opacity: 0.4;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* ================================
+   NAVIGATION LINKS
+================================ */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Normal link */
+.nav-links a {
+  color: #050505;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #fcf8f8;
+}
+
+/* Dropdown trigger */
+.nav-link {
+  color: #f9f9fb;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* ================================
+   HEADER ACTIONS (Right Side)
+================================ */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  // margin-left: auto;   // ✅ THIS pushes actions to right
+}
+
+/* CTA Button */
+.cta-btn {
+  background: #3960ee;
+  color: #0c0c0c;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background: #f3f6f6;
+}
+
+/* ================================
+   SCAN ICON ANIMATION
+================================ */
+.scan-icon {
+  cursor: pointer;
+  padding: 4px;
+  opacity: 0.9;
+}
+
+.scan-line {
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+  animation: scanMove 1.5s linear infinite;
+  opacity: 0;
+}
+
+.l1 { animation-delay: 0s; }
+.l2 { animation-delay: 0.3s; }
+.l3 { animation-delay: 0.6s; }
+
+@keyframes scanMove {
+  0% {
+    stroke-dashoffset: 20;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -20;
+    opacity: 0;
+  }
+}
+
+/* ================================
+   DROPDOWN MENU
+================================ */
+/* Dropdown wrapper */
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown panel */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  min-width: 220px;
+  background: #fcfcfc;
+  border-radius: 10px;
+  padding: 8px 0;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgb(255, 255, 255);
+  z-index: 1000;
+}
+
+/* Show on click */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  padding: 12px 16px;
+  color: #08090a;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #1f2937;
+  color: rgb(248, 244, 244);
+}
+
+
+
+
+
+
+.dropdown {
+  position: relative;
+}
+
+/* Dropdown panel */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  min-width: 220px;
+  background: #fcfcfc;
+  border-radius: 10px;
+  padding: 8px 0;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 12px 30px rgb(255, 255, 255);
+  z-index: 1000;
+}
+
+/* Show on click */
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  padding: 12px 16px;
+  color: #08090a;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: #1f2937;
+  color: rgb(248, 244, 244);
+}

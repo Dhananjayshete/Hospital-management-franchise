@@ -1,0 +1,15 @@
+<div class="hospital-container">
+    <h1>{{ hospital.name }}</h1>
+  
+    <p><strong>Address:</strong> {{ hospital.address }}</p>
+    <p><strong>Phone:</strong> {{ hospital.phone }}</p>
+    <p><strong>Email:</strong> {{ hospital.email }}</p>
+  
+    <h3>Services</h3>
+    <ul>
+      <li *ngFor="let service of hospital.services">
+        {{ service }}
+      </li>
+    </ul>
+  </div>
+  

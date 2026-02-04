@@ -1,0 +1,21 @@
+.find-doctor-page {
+  display: flex;
+  min-height: calc(100vh - 80px); // adjust header height
+  background: #f5f7fa;
+}
+
+.sidebar {
+  width: 300px;
+  padding: 1rem;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.department-menu {
+  width: 100%;
+}

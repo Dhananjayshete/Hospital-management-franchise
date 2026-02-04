@@ -1,0 +1,15 @@
+<div class="scanner-backdrop">
+    <div class="scanner-modal">
+      <!-- <zxing-scanner
+        [autofocusEnabled]="true"
+        [device]="null"
+        (scanSuccess)="onScanSuccess($event)"
+      ></zxing-scanner> -->
+      <zxing-scanner
+      (scanSuccess)="onScanSuccess($event)">
+    </zxing-scanner>
+    
+      <button class="close-btn" (click)="close()">Close</button>
+    </div>
+  </div>
+  

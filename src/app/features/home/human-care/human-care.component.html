@@ -1,0 +1,40 @@
+<section class="human-care">
+  <div class="container">
+
+    <!-- LEFT CONTENT -->
+    <div class="content">
+      <h2>Where Every Heartbeat Matters</h2>
+
+      <p>
+        For over seven decades, we have been driven by one purpose—putting patients first.
+        From our humble beginnings in 1953 to becoming a 12,600+ bed network across 49 hospitals,
+        VivaCare Hospitals stands as a symbol of trust, expertise, and compassion.
+        Our doctors don't just heal—they champion hope, fight alongside you, and never give up.
+        Because at VivaCare Hospitals, we believe every single life is priceless.
+      </p>
+
+      <p>
+        Today, we are one of India’s leading healthcare groups with over 14,000
+        beds across 49 hospitals.
+      </p>
+
+      <!-- FIND A DOCTOR CTA -->
+      <div class="human-care-cta">
+        <a
+          routerLink="/find-doctor"
+          class="find-doctor-btn">
+           Find a Doctor
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT STATS -->
+    <div class="stats" #statsSection>
+      <div class="stat" *ngFor="let stat of stats">
+        <span class="number">{{ stat.current }}+</span>
+        <span class="label">{{ stat.label }}</span>
+      </div>
+    </div>
+
+  </div>
+</section>
